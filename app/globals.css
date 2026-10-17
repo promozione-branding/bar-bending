@@ -67,3 +67,37 @@ select option {
 .prose li, .blog-content li {
   margin: 0.25rem 0;
 }
+.topbar-marquee {
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.topbar-marquee:hover {
+  animation-play-state: paused;
+}
+
+
+.topbar-sparkle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  color: #FFBF35;
+  font-size: 12px;
+  line-height: 1;
+  transform-origin: center;
+  animation: sparkle-rotate 2.5s linear infinite;
+}
+
+@keyframes sparkle-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

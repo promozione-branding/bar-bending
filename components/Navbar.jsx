@@ -42,72 +42,87 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-[2000] bg-white shadow-md">
 
-      {/* TOP BAR */}
+
+{/* TOP BAR */}
 <div className="w-full bg-[#3F1D0E] text-white overflow-hidden border-b border-[#D99516]">
-  <div className="w-full flex items-center h-[62px]">
+  <div className="w-full flex items-center h-[42px]">
 
     {/* GST SECTION */}
-    <div className="shrink-0 w-[25%] min-w-[280px] h-full flex items-center justify-center gap-4 border-r border-[#E5A323]/70 px-5">
+    <div className="shrink-0 w-[25%] min-w-[260px] h-full flex items-center justify-center gap-3 border-r border-[#E5A323]/60 px-4">
       <FileText
-        size={29}
+        size={22}
         className="text-[#FFB000] shrink-0"
         strokeWidth={1.8}
       />
 
-      <div className="h-10 w-px bg-[#E5A323]/60" />
+      <div className="h-6 w-px bg-[#E5A323]/60" />
 
-      <p className="whitespace-nowrap text-[17px] lg:text-[20px] font-semibold tracking-wide">
+      <p className="whitespace-nowrap text-sm font-semibold tracking-wide">
         GST: <span className="font-bold">07BPIPM2937L1ZG</span>
       </p>
     </div>
 
     {/* MARQUEE SECTION */}
-    <div className="flex-1 min-w-0 overflow-hidden relative">
-      <div className="flex w-max animate-marquee items-center">
+    <div className="flex-1 min-w-0 overflow-hidden">
+      <div className="flex w-max items-center animate-marquee">
 
         {[1, 2].map((group) => (
           <div
             key={group}
             className="flex shrink-0 items-center"
+            aria-hidden={group === 2}
           >
-            <div className="flex items-center gap-3 px-5">
-              <Truck size={27} className="text-[#FFB000] shrink-0" />
-              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+            {/* MANUFACTURER */}
+            <div className="flex items-center gap-2 px-4">
+              <Truck
+                size={21}
+                className="text-[#FFB000] shrink-0"
+              />
+              <span className="whitespace-nowrap text-[11px] font-bold uppercase">
                 Leading Construction Machine Manufacturer & Supplier
               </span>
             </div>
 
-            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
+            <span className="topbar-sparkle">✦</span>
 
-            <div className="flex items-center gap-3 px-5">
-              <Settings size={28} className="text-[#FFB000] shrink-0" />
-              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+            {/* DELIVERY */}
+            <div className="flex items-center gap-2 px-4">
+              <Settings
+                size={22}
+                className="text-[#FFB000] shrink-0"
+              />
+              <span className="whitespace-nowrap text-[11px] font-bold uppercase">
                 On-Time Delivery
               </span>
             </div>
 
-            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
+            <span className="topbar-sparkle">✦</span>
 
-            <div className="flex items-center gap-3 px-5">
+            {/* QUALITY */}
+            <div className="flex items-center gap-2 px-4">
               <ShieldCheck
-                size={28}
+                size={22}
                 className="text-[#FFB000] shrink-0"
               />
-              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+              <span className="whitespace-nowrap text-[11px] font-bold uppercase">
                 Quality Products
               </span>
             </div>
 
-            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
+            <span className="topbar-sparkle">✦</span>
 
-            <div className="flex items-center gap-3 px-5">
-              <Truck size={27} className="text-[#FFB000] shrink-0" />
-              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+            {/* PAN INDIA SUPPLY */}
+            <div className="flex items-center gap-2 px-4">
+              <Truck
+                size={21}
+                className="text-[#FFB000] shrink-0"
+              />
+              <span className="whitespace-nowrap text-[11px] font-bold uppercase">
                 Pan India Supply
               </span>
             </div>
 
-            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
+            <span className="topbar-sparkle">✦</span>
           </div>
         ))}
 
@@ -115,6 +130,7 @@ const Navbar = () => {
     </div>
   </div>
 </div>
+
 
         {/* =========================================================
             MAIN NAVBAR
