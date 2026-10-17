@@ -2985,7 +2985,7 @@ export const products = [
     category: "anti-fog-cannon-machine",
     model: "SSI",
     image: {
-      src: "/products/asg/Truck-Mounted-Anti-Smog-Gun/1.webp",
+      src: "/product/57.webp",
       alt: "Truck Mounted Anti Smog Gun",
     },
     images: [
@@ -4128,7 +4128,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-11",
     image: {
-      src: "/products/cm/FOUR POLE MIXER LIFT/1.webp",
+      src: "/product/45.webp",
       alt: "FOUR POLE MIXER LIFT",
     },
 
@@ -4311,7 +4311,7 @@ export const products = [
     category: "concrete-mixer-machines",
     model: "SSI-MX-05",
     image: {
-      src: "/products/cm/CONCRETE MIXER WITH HOPPER/1.webp",
+      src: "/product/53.webp",
       alt: "Concrete Mixer with Hopper",
     },
     images: [
@@ -4410,7 +4410,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-09",
     image: {
-      src: "/products/cm/MIXER LIFT WITH HYDRAULIC HOPPER/1.webp",
+      src: "/product/54.webp",
       alt: "Mixer Lift with Hydraulic Hopper",
     },
     images: [
@@ -4511,7 +4511,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-12",
     image: {
-      src: "/products/cm/PAN MIXER/1.webp",
+      src: "/product/55.webp",
       alt: "Pan Mixer",
     },
     images: [
@@ -4599,7 +4599,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MB-01",
     image: {
-      src: "/products/cm/Reversible Mini Batching Plant/1.webp",
+      src: "/product/41.webp",
       alt: "Mobile RM 800 System",
     },
     images: [
@@ -4982,7 +4982,7 @@ export const products = [
     category: "lab-testing-equipment",
     model: "SSI-CTM-200D",
     image: {
-      src: "/product/48.webp",
+      src: "/product/48 (1).webp",
       alt: "200 Ton Digital Compression Testing Machine",
     },
     images: [
@@ -5174,7 +5174,7 @@ export const products = [
     category: "lab-testing-equipment",
     model: "SSI-HAO-01",
     image: {
-      src: "/products/lte/HOT AIR OVEN/1.webp",
+      src: "/product/52.webp",
       alt: "Hot Air Oven",
     },
 
@@ -7121,7 +7121,7 @@ export const products = [
     category: "ride-on-roller-plate-compactor",
     model: "SSI-SMT-S600",
     image: {
-      src: "/products/ror/DOUBLE DRUM ROLLER ( WALK BEHIND)/1.webp",
+      src: "/product/60.webp",
       alt: "Double Drum Roller Walk Behind",
     },
     images: [
@@ -7229,7 +7229,7 @@ export const products = [
     category: "ride-on-roller-plate-compactor",
     model: "SSI-PC01/02",
     image: {
-      src: "/products/ror/PLATE COMPACTOR ( ELECTRIC  DIESEL)/1.webp",
+      src: "/product/62.webp",
       alt: "Plate Compactor Electric Diesel",
     },
     images: [
@@ -7333,7 +7333,7 @@ export const products = [
     category: "ride-on-roller-plate-compactor",
     model: "SSI-SMT-700",
     image: {
-      src: "/products/ror/ride/1.webp",
+      src: "/product/60.webp",
       alt: "Ride On Roller for road compaction",
     },
     images: [
@@ -7439,7 +7439,7 @@ export const products = [
     category: "ride-on-roller-plate-compactor",
     model: "SSI-SMT-600",
     image: {
-      src: "/products/ror/SINGLE DRUM VIBRATOR ROLLER/1.webp",
+      src: "/product/59 (2).webp",
       alt: "Single Drum Vibratory Roller",
     },
     images: [
@@ -7819,7 +7819,7 @@ export const products = [
     category: "material-lifting-equipment",
     model: "SSI-ZLP-800",
     image: {
-      src: "/products/ml/SUSPENDED PLATFORM (CRADLE)/1.webp",
+      src: "/product/64.webp",
       alt: "Suspended Platform Cradle for Construction",
     },
     images: [
@@ -8015,7 +8015,7 @@ export const products = [
     category: "trolley-vibrator",
     model: "SSI-CC-02",
     image: {
-      src: "/products/tv/CONCRETE CUTTER  ELECTRIC/4.webp",
+      src: "/product/65.webp",
       alt: "Electric Concrete Cutter Machine",
     },
     images: [
@@ -8295,7 +8295,7 @@ export const products = [
     category: "trolley-vibrator",
     model: "SSI-ST-03",
     image: {
-      src: "/products/tv/SLAB TROLLY  METRO TROLLY/1.webp",
+      src: "/product/66.webp",
       alt: "Slab Trolly Metro Trolly",
     },
 
