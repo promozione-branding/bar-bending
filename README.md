@@ -509,3 +509,5 @@ const Page = ({ params }) => {
 };
 
 export default Page;
+#   b a r - b e n d i n g  
+ 
