@@ -9,7 +9,7 @@ import Link from "next/link";
 export const images = [
   {
     id: 1,
-    src: "/home/hero1.webp",
+    src: "/Industrial Rebar Benders at Construction Site.png",
     title: "Bar Bending Supplier",
     subtitle: "Machine Supplier",
     description:
