@@ -67,16 +67,31 @@ select option {
 .prose li, .blog-content li {
   margin: 0.25rem 0;
 }
-.topbar-marquee {
+
+
+
+/* TOP BAR MARQUEE */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
   animation: marquee 30s linear infinite;
   will-change: transform;
 }
 
-.topbar-marquee:hover {
+/* Pause marquee on hover */
+.animate-marquee:hover {
   animation-play-state: paused;
 }
 
-
+/* Small rotating golden sparkle */
 .topbar-sparkle {
   display: inline-flex;
   align-items: center;
@@ -99,5 +114,18 @@ select option {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Pause marquee when hovering anywhere over top bar */
+.bg-\[\#3F1D0E\]:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .topbar-sparkle {
+    animation: none;
   }
 }
