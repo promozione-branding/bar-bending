@@ -6,6 +6,13 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Enquiry from "./Enquiry";
+import {
+  FileText,
+  Truck,
+  Settings,
+  ShieldCheck,
+  Star,
+} from "lucide-react";
 
 const Navbar = () => {
   const navItems = ["Home", "About Us", "Products", "Blogs", "Contact Us"];
@@ -35,39 +42,79 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full z-[2000] bg-white shadow-md">
 
-        {/* =========================================================
-            TOP BAR
-        ========================================================= */}
-        <div className="w-full bg-[#3F2212] text-white overflow-hidden">
-          <div className="max-w-[1440px] mx-auto flex items-center h-9">
+      {/* TOP BAR */}
+<div className="w-full bg-[#3F1D0E] text-white overflow-hidden border-b border-[#D99516]">
+  <div className="w-full flex items-center h-[62px]">
 
-            {/* 30% GST */}
-            <div className="w-[30%] min-w-[130px] h-full flex items-center justify-center border-r border-white/20 text-xs sm:text-sm font-medium whitespace-nowrap">
-              GST: <span className="ml-1 font-bold">07BPIPM2937L1ZG</span>
+    {/* GST SECTION */}
+    <div className="shrink-0 w-[25%] min-w-[280px] h-full flex items-center justify-center gap-4 border-r border-[#E5A323]/70 px-5">
+      <FileText
+        size={29}
+        className="text-[#FFB000] shrink-0"
+        strokeWidth={1.8}
+      />
+
+      <div className="h-10 w-px bg-[#E5A323]/60" />
+
+      <p className="whitespace-nowrap text-[17px] lg:text-[20px] font-semibold tracking-wide">
+        GST: <span className="font-bold">07BPIPM2937L1ZG</span>
+      </p>
+    </div>
+
+    {/* MARQUEE SECTION */}
+    <div className="flex-1 min-w-0 overflow-hidden relative">
+      <div className="flex w-max animate-marquee items-center">
+
+        {[1, 2].map((group) => (
+          <div
+            key={group}
+            className="flex shrink-0 items-center"
+          >
+            <div className="flex items-center gap-3 px-5">
+              <Truck size={27} className="text-[#FFB000] shrink-0" />
+              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+                Leading Construction Machine Manufacturer & Supplier
+              </span>
             </div>
 
-            {/* 70% Marquee */}
-            <div className="w-[70%] overflow-hidden relative h-full flex items-center">
-              <div className="flex whitespace-nowrap animate-marquee">
-                <span className="text-xs sm:text-sm font-medium px-10">
-                  Leading Construction Machine Manufacturer & Supplier
-                </span>
+            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
 
-                <span className="text-xs sm:text-sm font-medium px-10">
-                  Leading Construction Machine Manufacturer & Supplier
-                </span>
-
-                <span className="text-xs sm:text-sm font-medium px-10">
-                  Leading Construction Machine Manufacturer & Supplier
-                </span>
-
-                <span className="text-xs sm:text-sm font-medium px-10">
-                  Leading Construction Machine Manufacturer & Supplier
-                </span>
-              </div>
+            <div className="flex items-center gap-3 px-5">
+              <Settings size={28} className="text-[#FFB000] shrink-0" />
+              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+                On-Time Delivery
+              </span>
             </div>
+
+            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
+
+            <div className="flex items-center gap-3 px-5">
+              <ShieldCheck
+                size={28}
+                className="text-[#FFB000] shrink-0"
+              />
+              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+                Quality Products
+              </span>
+            </div>
+
+            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
+
+            <div className="flex items-center gap-3 px-5">
+              <Truck size={27} className="text-[#FFB000] shrink-0" />
+              <span className="whitespace-nowrap text-[12px] font-bold uppercase">
+                Pan India Supply
+              </span>
+            </div>
+
+            <Star className="text-[#FFB000] fill-[#FFB000]" size={15} />
           </div>
-        </div>
+        ))}
+
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* =========================================================
             MAIN NAVBAR
