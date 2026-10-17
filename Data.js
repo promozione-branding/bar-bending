@@ -3099,7 +3099,7 @@ export const products = [
     category: "anti-fog-cannon-machine",
     model: "SSI",
     image: {
-      src: "/products/asg/Water-Fog-And-Water-Mist-Systems/1.webp",
+      src: "/product/22.webp",
       alt: "Water Fog And Water Mist Systems",
     },
     images: [
@@ -3446,7 +3446,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-01-02",
     image: {
-      src: "/products/cm/180230Ltr. MINI CONCRETE MIXER/1.webp",
+      src: "/product/56.webp",
       alt: "180/230Ltr. MINI CONCRETE MIXER",
     },
     images: [
@@ -3652,7 +3652,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MB-01",
     image: {
-      src: "/products/cm/Concrete Mini Mobile Batching Plant/1.webp",
+      src: "/product/69.webp",
       alt: "Concrete Mini Mobile Batching Plant",
     },
     images: [
@@ -4212,7 +4212,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MB-01",
     image: {
-      src: "/products/cm/Mini Mobile Batching/Mini Mobile Concrete Batching Plant Rm800/1.webp",
+      src: "/product/54.webp",
       alt: "Mini Mobile Batching Plant",
     },
     images: [
