@@ -17,7 +17,7 @@ export const images = [
   },
   {
     id: 2,
-    src: "/Green Mist Cannons at Construction Site.png",
+    src: "/Industrial Mist Cannon Showcase.png",
     title: "Anti Smog Gun",
     subtitle: "Advanced Air Pollution Control",
     description:
