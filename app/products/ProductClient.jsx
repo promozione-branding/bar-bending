@@ -103,7 +103,7 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Product Image */}
-                  <div className="bg-white flex items-center justify-center p-4 h-56">
+                  <div className="bg-white flex items-center justify-center p-0 h-56">
                     <Image
                       src={product.image.src}
                       alt="Bar Bending Machine Supplier"

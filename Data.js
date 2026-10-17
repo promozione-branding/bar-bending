@@ -1,3 +1,4 @@
+
 export const categories = [
   {
     id: "bar-processing-machines",
@@ -33,8 +34,8 @@ export const products = [
     category: "bar-processing-machines",
     model: "RB-600",
     image: {
-      src: "/products/bpm/Automatic Bar Bender/1.webp",
-      alt: "Automatic Bar Bender",
+      src: "/product/5 (11).webp",
+     alt: "Automatic Bar Bender",
     },
     images: [
       {
@@ -71,7 +72,8 @@ export const products = [
           "<strong>Accurate Bending:</strong> We are a professional <strong>Automatic Bar Bender Supplier</strong> offering machines with precise angle control for consistent bending results.",
           "<strong>User-Friendly Controls:</strong> As a trusted <strong>Automatic Bar Bender Supplier</strong>, we ensure the machines have simple and safe operational panels for hassle-free use.",
           "<strong>Versatile Bar Sizes:</strong> Shree Shakti Infratech is a <strong>Automatic Bar Bender Supplier</strong> providing machines suitable for various bar diameters and lengths.",
-          "<strong>Low Maintenance:</strong> As a leading <strong>Automatic Bar Bender Supplier</strong>, our systems are designed for minimal upkeep and high operational efficiency.",
+      
+         "<strong>Low Maintenance:</strong> As a leading <strong>Automatic Bar Bender Supplier</strong>, our systems are designed for minimal upkeep and high operational efficiency.",
         ],
       },
 
@@ -143,7 +145,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-42",
     image: {
-      src: "/products/bpm/Automatic Bar Bending Machine/1.webp",
+      src: "/product/6 (8).webp",
       alt: " Bar Bending Machine",
     },
     images: [
@@ -251,7 +253,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-42",
     image: {
-      src: "/products/bpm/Automatic Rebar Bending Machine/1.webp",
+      src: "/product/6 (8).webp",
       alt: "Rebar Bending Machine 32Mm-40Mm",
     },
     images: [
@@ -260,7 +262,7 @@ export const products = [
         alt: "Rebar Bending Machine 32Mm-40Mm",
       },
       {
-        src: "/products/bpm/Automatic Rebar Bending Machine/3.webp",
+        src: "/product/9 (8).webp",
         alt: "Rebar Bending Machine 32Mm-40Mm",
       },
     ],
@@ -352,7 +354,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-50",
     image: {
-      src: "/products/bpm/Bar Bending Machine Gw 50/1.webp",
+      src: "/product/9 (8).webp",
       alt: "Bar Bending Machine GW-50",
     },
     images: [
@@ -573,7 +575,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI-GQ-40",
     image: {
-      src: "/products/bpm/BAR CUTTING MACHINE/1.webp",
+      src: "/product/30 (1).webp",
       alt: "Automatic Bar Cutting Machine",
     },
     images: [
@@ -681,7 +683,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI-BT-40",
     image: {
-      src: "/products/bpm/BAR THREADING MACHINE/1.webp",
+      src: "/product/34 (1).webp",
       alt: "Automatic Bar Threading Machine",
     },
     images: [
@@ -891,7 +893,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI-SGW12D-2",
     image: {
-      src: "/products/bpm/FULLY AUTOMATIC RING MACHINE/1.webp",
+      src: "/product/7 (10).webp",
       alt: "Fully Automatic Ring Making Machine",
     },
 
@@ -992,7 +994,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI",
     image: {
-      src: "/products/bpm/RING MAKING MACHINE/1.webp",
+      src: "/product/46.webp",
       alt: "MS Ring Making Machine",
     },
     videoUrl: "https://youtu.be/Oh8Y-LRhUr4?si=zkHR3wDfm2eU7W2S",
@@ -1092,7 +1094,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI-GTQ-4-14",
     image: {
-      src: "/products/bpm/REBAR DECOILING MACHINE/1.webp",
+      src: "/product/1 - 2026-10-17T114104.382.webp",
       alt: "Rebar Decoiling Machine",
     },
     images: [
@@ -1317,7 +1319,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI-GW-42",
     image: {
-      src: "/products/bpm/Rod Bending Machine/Rod Bending Machine 28 Mm/1.webp",
+      src: "/product/4 (11).webp",
       alt: "Automatic Rod Bending Machine",
     },
     images: [
@@ -1467,7 +1469,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-42",
     image: {
-      src: "/products/bpm/Sariya Binding Machine/Saria Bending Machine 32Mm/1.webp",
+      src: "/product/5 (11).webp",
       alt: "Saria Bending Machine 32 Mm",
     },
     images: [
@@ -1609,7 +1611,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-42",
     image: {
-      src: "/products/bpm/Sariya Binding Machine/Saria Bending Machine 40 Mm/1.webp",
+      src: "/product/9 (8).webp",
       alt: "Saria Bending Machine 40 Mm",
     },
     images: [
@@ -1751,7 +1753,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - RM-32",
     image: {
-      src: "/products/bpm/semi ring phase/1.webp",
+      src: "/product/13 (4).webp",
       alt: "Single Phase Ring Making Machine",
     },
 
@@ -1904,7 +1906,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GWH-032",
     image: {
-      src: "/products/bpm/SPIRAL BENDING MACHINE/1.webp",
+      src: "/product/14 (2).webp",
       alt: "Spiral Bending Machine",
     },
 
@@ -2029,7 +2031,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-42",
     image: {
-      src: "/products/bpm/Steel Rebar Bender/1.webp",
+      src: "/product/16 (3).webp",
       alt: "Steel Bar Bending Machine 25Mm",
     },
 
@@ -2161,7 +2163,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-42",
     image: {
-      src: "/products/bpm/Steel Rebar Bender/2.webp",
+      src: "/product/11 (4).webp",
       alt: "Steel Rebar Bending Machine 32Mm",
     },
 
@@ -2260,7 +2262,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI - GW-42",
     image: {
-      src: "/products/bpm/Stirrup Making Machine/1.webp",
+      src: "/product/8 (4).webp",
       alt: "Stirrup Bar Rod Bending Machine",
     },
     images: [
@@ -2366,7 +2368,7 @@ export const products = [
     category: "bar-processing-machines",
     model: "SSI GW 42",
     image: {
-      src: "/products/bpm/Rod Bending Machine/1.webp",
+      src: "/product/18 (3).webp",
       alt: "TMT Bar Bending Machine",
     },
     images: [
@@ -2471,7 +2473,7 @@ export const products = [
     category: "anti-fog-cannon-machine", // same as id
     model: "RB-700",
     image: {
-      src: "/products/asg/Anti-Fog-Cannon-Machine/1.webp",
+      src: "/product/19 (1).webp",
       alt: "Anti-Fog Cannon Machine",
     },
     images: [
@@ -2600,7 +2602,7 @@ export const products = [
     category: "anti-fog-cannon-machine", // same as id
     model: "RB-11200",
     image: {
-      src: "/products/asg/Fog-Cannon-Dust-Suppression-System/1.webp",
+      src: "/product/23.webp",
       alt: "Fog Cannon Dust Suppression System",
     },
     images: [
@@ -2748,7 +2750,7 @@ export const products = [
     category: "anti-fog-cannon-machine",
     model: "SSI - SG-01",
     image: {
-      src: "/products/asg/Fog-Cannon-Spray-Machine/1.webp",
+      src: "/product/21.webp",
       alt: "Fog Cannon Spray Machine",
     },
     images: [
@@ -2862,7 +2864,7 @@ export const products = [
     category: "anti-fog-cannon-machine",
     model: "SSI",
     image: {
-      src: "/products/asg/Mist-Cannon-Dust-Suppression-Systems/1.webp",
+      src: "/product/23.webp",
       alt: "Mist Cannon Dust Suppression Systems",
     },
     images: [
@@ -3210,7 +3212,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI MX 05",
     image: {
-      src: "/products/cm/2PoleTowerLiftConcreteMixerMachine/1.webp",
+      src: "/product/24.webp",
       alt: "2 Pole Tower Lift Concrete Mixer Machine",
     },
     images: [
@@ -3325,7 +3327,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-10",
     image: {
-      src: "/products/cm/3 BIN MIXER LIFT WITH HYDRAULIC HOPPER/1.webp",
+      src: "/product/38 (1).webp",
       alt: "3 BIN MIXER LIFT WITH HYDRAULIC HOPPER",
     },
     images: [
@@ -3553,7 +3555,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-CBL-01",
     image: {
-      src: "/products/cm/COLUMN BOX LIFT MACHINE/1.webp",
+      src: "/product/26.webp",
       alt: "COLUMN BOX LIFT MACHINE",
     },
     images: [
@@ -3751,7 +3753,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-04",
     image: {
-      src: "/products/cm/CONCRETE MIXER/1.webp",
+      src: "/product/31.webp",
       alt: "Concrete Mixer",
     },
     images: [
@@ -3846,7 +3848,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-06",
     image: {
-      src: "/products/cm/CONCRETE MIXER HYDRAULIC HOPPER/1.webp",
+      src: "/product/32 (1).webp",
       alt: "Concrete Mixer Hydraulic Hopper",
     },
     images: [
@@ -3938,7 +3940,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MX-07",
     image: {
-      src: "/products/cm/CONCRETE MIXER LIFT/1.webp",
+      src: "/product/37 (1).webp",
       alt: "Concrete Mixer Lift",
     },
     images: [
@@ -4027,7 +4029,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MB-01",
     image: {
-      src: "/products/cm/Concrete Mobile Batching Plant/1.webp",
+      src: "/product/15 (3).webp",
       alt: "Concrete Mobile Batching Plant",
     },
     images: [
@@ -4689,7 +4691,7 @@ export const products = [
     category: "concrete-mixers",
     model: "SSI-MB-02",
     image: {
-      src: "/products/cm/REVERSIBLE MIXER RM 1050/1.webp",
+      src: "/product/41.webp",
       alt: "Reversible Mixer RM 1050",
     },
     images: [
@@ -4980,7 +4982,7 @@ export const products = [
     category: "lab-testing-equipment",
     model: "SSI-CTM-200D",
     image: {
-      src: "/products/lte/C.T.M 100 TON  200 TON/1.webp",
+      src: "/product/48.webp",
       alt: "200 Ton Digital Compression Testing Machine",
     },
     images: [
@@ -5085,14 +5087,10 @@ export const products = [
     category: "lab-testing-equipment",
     model: "SSI-CM-150",
     image: {
-      src: "/products/lte/CUBE MOULD/1.webp",
+      src: "/product/49.webp",
       alt: "Concrete Cube Mould",
     },
     images: [
-      {
-        src: "/products/lte/CUBE MOULD/2.webp",
-        alt: "Concrete Cube Mould cast iron build",
-      },
       {
         src: "/products/lte/CUBE MOULD/3.webp",
         alt: "Concrete Cube Mould square shape",
