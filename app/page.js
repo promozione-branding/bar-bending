@@ -30,6 +30,7 @@ export default function Home() {
 
       <About></About>
       <Productcategory></Productcategory>
+         <Youtube></Youtube>
       <Whychoose></Whychoose>
       <Bestseller></Bestseller>
       <Process></Process>
@@ -40,7 +41,7 @@ export default function Home() {
       <Cta></Cta>
 
       <Barbending></Barbending>
-      <Youtube></Youtube>
+   
       <Testimonials></Testimonials>
       <Faq></Faq>
       <Cta2></Cta2>
