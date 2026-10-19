@@ -12,7 +12,7 @@ export const images = [
   {
     id: 1,
     src: "/Branded Rebar Benders at Construction Site.png",
-    mobileSrc: "/mobile/bar-bending-mobile.webp",
+    mobileSrc: "/Branded Rebar Benders at Construction Site.png",
     title: "Bar Bending Supplier",
     subtitle: "Machine Supplier",
     description:
@@ -21,7 +21,7 @@ export const images = [
   {
     id: 2,
     src: "/Industrial Mist Cannon Showcase.png",
-    mobileSrc: "/mobile/anti-smog-mobile.webp",
+    mobileSrc: "/mo3 (1).webp",
     title: "Anti Smog Gun",
     subtitle: "Advanced Air Pollution Control",
     description:
@@ -30,7 +30,7 @@ export const images = [
   {
     id: 3,
     src: "/banner new (1).webp",
-    mobileSrc: "/mobile/monkey-lifting-mobile.webp",
+    mobileSrc: "/mo2 (1).webp",
     title: "Monkey Lifting Machines",
     subtitle: "Automatic & Manual",
     description:

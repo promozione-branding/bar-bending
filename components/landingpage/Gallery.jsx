@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const galleryImages = [
-  { src: "/products/asg/Anti-Fog-Cannon-Machine/1.webp", link: "/products/anti-fog-cannon-machine", name: "Anti Fog Cannon Machine" },
-  { src: "/products/ror/ride/1.webp", link: "/products/ride-on-roller", name: "Ride On Roller" },
-  { src: "/products/bpm/Automatic Bar Bender/1.webp", link: "/products/bar-bending-machine", name: "Automatic Bar Bender" },
-  { src: "/products/cm/CONCRETE MIXER/1.webp", link: "/products/concrete-mixer", name: "Concrete Mixer" },
-  { src: "/products/lte/HOT AIR OVEN/1.webp", link: "/products/hot-air-oven", name: "Hot Air Oven" },
-  { src: "/products/ml/MONKEY HOIST ( 200300 KG )/1.webp", link: "/products/monkey-hoist-200-300kg", name: "Monkey Hoist (200-300 KG)" },
+  { src: "/product/6 (8).webp", link: "/products/anti-fog-cannon-machine", name: "Anti Fog Cannon Machine" },
+  { src: "/product/59 (2).webp", link: "/products/ride-on-roller", name: "Ride On Roller" },
+  { src: "/product/11 (4).webp", link: "/products/bar-bending-machine", name: "Automatic Bar Bender" },
+  { src: "/product/31.webp", link: "/products/concrete-mixer", name: "Concrete Mixer" },
+  { src: "/product/52.webp", link: "/products/hot-air-oven", name: "Hot Air Oven" },
+  { src: "/products/ml/MONKEY%20HOIST%20(%20200300%20KG%20)/2.webp", link: "/products/monkey-hoist-200-300kg", name: "Monkey Hoist (200-300 KG)" },
 ];
 
 const GallerySection = () => {
@@ -48,7 +48,7 @@ const GallerySection = () => {
                 src={item.src}
                 alt={item.name}
                 fill
-                className="bg-white object-contain transition-transform duration-700 group-hover:scale-110"
+                className="bg-white object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
               {/* Hover Overlay */}
