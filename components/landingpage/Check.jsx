@@ -6,7 +6,7 @@ import React from 'react'
 const Check = () => {
   return (
 
-      <section className="hidden md:block relative w-full h-auto flex items-center justify-center overflow-hidden">
+      <section className="hidden md:block relative w-full h-auto flex items-center justify-center overflow-hidden py-5">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -25,7 +25,7 @@ const Check = () => {
         
           >
             <img
-              src="/home/1 (12) (1).webp"
+              src="/1 (12) (1).webp"
               alt="Machine Left"
               className="w-[300px] md:w-[400px] drop-shadow-2xl relative z-20"
             />
