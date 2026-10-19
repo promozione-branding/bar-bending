@@ -21,7 +21,7 @@ export const images = [
   {
     id: 2,
     src: "/Industrial Mist Cannon Showcase.png",
-    mobileSrc: "/mo3 (1).webp",
+    mobileSrc: "/home/Green Mist Cannon at Sunset Construction Site.png",
     title: "Anti Smog Gun",
     subtitle: "Advanced Air Pollution Control",
     description:
@@ -30,7 +30,7 @@ export const images = [
   {
     id: 3,
     src: "/banner new (1).webp",
-    mobileSrc: "/mo2 (1).webp",
+    mobileSrc: "/home/Sunset Construction Hoist on Rooftop.png",
     title: "Monkey Lifting Machines",
     subtitle: "Automatic & Manual",
     description:
