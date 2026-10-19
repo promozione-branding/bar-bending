@@ -40,7 +40,7 @@ const Productcategory = () => {
       name: "Material Lifting",
       products: 37,
       img: "/home/productdesc/productdesc5.webp",
-      hoverImg: "/home/productdesc/actual/materiallifting.webp",
+      hoverImg: "/products/ml/MONKEY%20HOIST%20(%20200300%20KG%20)/1.webp",
       link: "/products",
     },
     {
@@ -114,18 +114,18 @@ const Productcategory = () => {
 
                 {/* Main Image */}
                 <Image
-                  src={cat.img}
+                  src={cat.hoverImg}
                   alt={cat.name}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-contain p-3 md:p-5
+                  className="object-contain p-3 md:p-1
                   transition-all duration-500
                   group-hover:scale-105 group-hover:opacity-0"
                 />
 
                 {/* Alternate Image */}
                 <Image
-                  src={cat.hoverImg}
+                  src={cat.img}
                   alt={`${cat.name} alternate view`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"

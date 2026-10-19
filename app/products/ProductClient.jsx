@@ -88,7 +88,8 @@ export default function ProductsPage() {
         ) : (
           <>
      
-{/* Product Grid - Updated Layout */}
+
+{/* Product Grid */}
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-7 mt-8 md:mt-20">
   {filteredProducts.map((product) => (
     <Link
@@ -96,14 +97,14 @@ export default function ProductsPage() {
       href={`/products/${product.slug}`}
       className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:shadow-xl"
     >
-      {/* Product Image */}
-      <div className="relative flex h-64 items-center justify-center overflow-hidden bg-[#F7F7F7] p-1 md:h-72">
+      {/* Product Image - Top */}
+      <div className="relative flex h-64 items-start justify-center overflow-hidden bg-[#F7F7F7] p-1 md:h-72">
         <Image
           src={product.image.src}
           alt={product.name}
           width={1080}
           height={1080}
-          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-contain object-top transition-transform duration-500 group-hover:scale-105"
         />
 
         {/* Product Label */}
@@ -111,15 +112,14 @@ export default function ProductsPage() {
           {product.model}
         </span>
 
-        {/* View Product */}
-        <div className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl text-black shadow-md transition-all duration-300 group-hover:bg-[#FFB800]">
+        {/* View Icon - Only on Hover */}
+        <div className="absolute bottom-4 right-4 flex h-10 w-10 translate-y-3 items-center justify-center rounded-full bg-white text-xl text-black opacity-0 shadow-md transition-all duration-300 group-hover:translate-y-0 group-hover:bg-[#FFB800] group-hover:opacity-100">
           ↗
         </div>
       </div>
 
       {/* Product Details */}
       <div className="flex flex-1 flex-col p-5">
-
         <h2 className="text-lg font-bold leading-snug text-gray-900 transition-colors duration-300 group-hover:text-yellow-600 md:text-xl">
           {product.name}
         </h2>
@@ -143,6 +143,7 @@ export default function ProductsPage() {
     </Link>
   ))}
 </div>
+
 
 
           </>

@@ -81,7 +81,7 @@ const AccordionHero = () => {
           perspective: true,
         }}
         autoplay={{
-          delay: 4500,
+          delay: 2000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
