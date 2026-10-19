@@ -25,7 +25,7 @@ const Check = () => {
         
           >
             <img
-              src="/feature2.webp"
+              src="/home/bar bending.webp"
               alt="Machine Left"
               className="w-[300px] md:w-[400px] drop-shadow-2xl relative z-20"
             />

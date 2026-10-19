@@ -59,7 +59,7 @@ India.</span></h3>
      {/* Left Side - Image */}
            <div className="hidden md:block absolute bottom-6 right-8">
              <Image
-               src="/home/ctaimg1.webp"
+               src="/home/suspended (2).webp"
                alt="Construction Equipment"
                width={400}
                height={400}
