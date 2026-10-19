@@ -55,7 +55,7 @@ const AccordionHero = () => {
       {/* =========================================================
           MOBILE HERO
       ========================================================= */}
-      <section className="block md:hidden w-full h-[60vh] overflow-hidden">
+      <section className="block md:hidden w-full h-[66vh] overflow-hidden">
         <Swiper
           slidesPerView={1}
           spaceBetween={0}
