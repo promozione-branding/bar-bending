@@ -56,17 +56,14 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {/* Column 1: Logo + About + Address + Social */}
             <div>
-              <div className="relative inline-block mb-4">
+              <div className="relative inline-block mb-4 ">
                 <Image
-                  src="/logo.png"
+                  src="/logo (2).png"
                   alt="Logo"
-                  width={180}
-                  height={50}
-                  className="bg-white"
+                  width={200}
+                  height={70}
+                  className="bg-white rounded-2xl "
                 />
-                <span className="absolute -top-0 -right-0 text-xs font-bold text-black">
-                  ®
-                </span>
               </div>
 
               <p className="text-sm leading-relaxed">
