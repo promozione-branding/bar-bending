@@ -55,7 +55,7 @@ const AccordionHero = () => {
       {/* =========================================================
           MOBILE HERO
       ========================================================= */}
-      <section className="block md:hidden w-full h-[66vh] overflow-hidden">
+      <section className="block md:hidden w-full h-[70vh] overflow-hidden">
         <Swiper
           slidesPerView={1}
           spaceBetween={0}
@@ -102,7 +102,7 @@ const AccordionHero = () => {
                   </p>
 
                   {/* Description */}
-                  <p className="mt-4 max-w-md text-base leading-relaxed">
+                  <p className="mt-4 max-w-md text-base leading-relaxed hidden md:block">
                     {item.description}
                   </p>
 
