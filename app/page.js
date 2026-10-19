@@ -30,9 +30,9 @@ export default function Home() {
 
       <About></About>
       <Productcategory></Productcategory>
-         <Youtube></Youtube>
-      <Whychoose></Whychoose>
+        <Whychoose></Whychoose>
       <Bestseller></Bestseller>
+       <Youtube></Youtube>
       <Process></Process>
       <Check></Check>
 

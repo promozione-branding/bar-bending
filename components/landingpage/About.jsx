@@ -8,7 +8,7 @@ export default function AboutSection() {
   return (
     <>
       <section className="relative bg-[#FFFAF1] overflow-hidden">
-        <div className="max-w-7xl  mt-8 md:mt-0 mx-auto px-6 md:px-12  grid grid-cols-1 md:grid-cols-2  items-center">
+        <div className="max-w-7xl  mt-8 md:mt-0 mx-auto px-6 md:px-12  grid grid-cols-1 md:grid-cols-2  items-center py-10">
           {/* Background Rectangle */}
           <Image
             src="/home/about-rect.webp"

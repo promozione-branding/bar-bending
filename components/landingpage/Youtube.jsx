@@ -32,7 +32,7 @@ export default function YoutubeSection() {
 
       {/* Heading */}
       <h2 className="text-3xl font-bold text-center mb-12">
-        Our YouTube Videos
+        Our Videos
       </h2>
 
       {/* Video Cards */}

@@ -87,39 +87,64 @@ export default function ProductsPage() {
           </div>
         ) : (
           <>
-            {/* Product Grid */}
-            <div className="grid grid-cols-1 md:mt-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
-              {filteredProducts.map((product) => (
-                <Link
-                  key={product.id}
-                  href={`/products/${product.slug}`}
-                  className="border rounded-lg shadow hover:shadow-lg transition overflow-hidden group flex flex-col"
-                >
-                  {/* Product Name */}
-                  <div className="bg-white text-center px-3 py-4 min-h-[70px] flex items-center justify-center">
-                    <h2 className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-yellow-600 transition text-center">
-                      {product.name}
-                    </h2>
-                  </div>
+     
+{/* Product Grid - Updated Layout */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-7 mt-8 md:mt-20">
+  {filteredProducts.map((product) => (
+    <Link
+      key={product.id}
+      href={`/products/${product.slug}`}
+      className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:shadow-xl"
+    >
+      {/* Product Image */}
+      <div className="relative flex h-64 items-center justify-center overflow-hidden bg-[#F7F7F7] p-1 md:h-72">
+        <Image
+          src={product.image.src}
+          alt={product.name}
+          width={1080}
+          height={1080}
+          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+        />
 
-                  {/* Product Image */}
-                  <div className="bg-white flex items-center justify-center p-0 h-56">
-                    <Image
-                      src={product.image.src}
-                      alt="Bar Bending Machine Supplier"
-                      width={300}
-                      height={200}
-                      className="object-contain max-h-full"
-                    />
-                  </div>
+        {/* Product Label */}
+        <span className="absolute left-4 top-4 rounded-md bg-[#FFB800] px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">
+          {product.model}
+        </span>
 
-                  {/* Footer with Model No */}
-                  <div className="bg-black text-white text-center py-2 text-sm md:text-base font-medium mt-auto">
-                    Model No. - {product.model}
-                  </div>
-                </Link>
-              ))}
-            </div>
+        {/* View Product */}
+        <div className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl text-black shadow-md transition-all duration-300 group-hover:bg-[#FFB800]">
+          ↗
+        </div>
+      </div>
+
+      {/* Product Details */}
+      <div className="flex flex-1 flex-col p-5">
+
+        <h2 className="text-lg font-bold leading-snug text-gray-900 transition-colors duration-300 group-hover:text-yellow-600 md:text-xl">
+          {product.name}
+        </h2>
+
+        <div className="mt-5 flex items-center justify-between border-t border-gray-200 pt-4">
+          <div>
+            <p className="text-xs text-gray-500">Model Number</p>
+            <p className="mt-1 text-sm font-bold text-gray-900">
+              {product.model}
+            </p>
+          </div>
+
+          <span className="inline-flex items-center gap-2 text-sm font-bold text-gray-900 transition-colors group-hover:text-yellow-600">
+            View Details
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </span>
+        </div>
+      </div>
+    </Link>
+  ))}
+</div>
+
+
           </>
         )}
       </section>

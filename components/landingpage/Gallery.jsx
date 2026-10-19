@@ -6,7 +6,7 @@ const galleryImages = [
   { src: "/product/6 (8).webp", link: "/products/anti-fog-cannon-machine", name: "Anti Fog Cannon Machine" },
   { src: "/product/59 (2).webp", link: "/products/ride-on-roller", name: "Ride On Roller" },
   { src: "/product/11 (4).webp", link: "/products/bar-bending-machine", name: "Automatic Bar Bender" },
-  { src: "/product/31.webp", link: "/products/concrete-mixer", name: "Concrete Mixer" },
+  { src: "/product/mixer.webp", link: "/products/concrete-mixer", name: "Concrete Mixer" },
   { src: "/product/52.webp", link: "/products/hot-air-oven", name: "Hot Air Oven" },
   { src: "/products/ml/MONKEY%20HOIST%20(%20200300%20KG%20)/2.webp", link: "/products/monkey-hoist-200-300kg", name: "Monkey Hoist (200-300 KG)" },
 ];
