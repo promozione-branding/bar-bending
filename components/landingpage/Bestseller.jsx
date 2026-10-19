@@ -9,7 +9,7 @@ const products = [
   id: 1,
   badge: "Best Seller",
   name: "Automatic Bar Bending Machine 32-40 MM",
-  image: "/products/bpm/Automatic Bar Bender/1.webp",
+  image: "/product/3 (31).webp",
   details: {
     "Bar Dimensions": "8mm to 32mm",
     "Model Name/Number": "SSI GW 42",
@@ -28,7 +28,7 @@ const products = [
   id: 5,
   badge: "New Arrival",
   name: "Anti-Fog Cannon Machine",
-  image: "/products/asg/Anti-Fog-Cannon-Machine/1.webp",
+  image: "/product/19 (1).webp",
   details: {
     "Model": "RB-700",
     "Throw Range": "25 metre",
@@ -47,7 +47,7 @@ const products = [
   id: 16,
   badge: "Best Seller",
   name: "Concrete Mixer",
-  image: "/products/cm/CONCRETE MIXER/1.webp",
+  image: "/product/32 (1).webp",
   details: {
     "Model": "SSI-MX-04",
     "Capacity": "10/7 Cft. / One Bag",
@@ -63,7 +63,7 @@ const products = [
   id: 52,
   badge: "Hot Selling",
   name: "Ride On Roller",
-  image: "/products/ror/ride/1.webp",
+  image: "/product/60.webp",
   details: {
     "Model": "SSI-SMT-700",
     "Walking/Driving Speed": "0-4 Km/H",
@@ -78,11 +78,6 @@ const products = [
   }
 }
 
-
-
-
-
- 
 ];
 
 const ProductCarousel = () => {
@@ -136,8 +131,8 @@ const ProductCarousel = () => {
             <Image
               src={product.image}
               alt={product.name}
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               priority={current === 0} // prioritize first image for better LCP
               className="object-contain "
             />

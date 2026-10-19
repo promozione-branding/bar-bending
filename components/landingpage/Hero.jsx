@@ -1,15 +1,18 @@
 "use client";
+
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
+
+import "swiper/css";
 
 export const images = [
   {
     id: 1,
     src: "/Branded Rebar Benders at Construction Site.png",
+    mobileSrc: "/mobile/bar-bending-mobile.webp",
     title: "Bar Bending Supplier",
     subtitle: "Machine Supplier",
     description:
@@ -18,6 +21,7 @@ export const images = [
   {
     id: 2,
     src: "/Industrial Mist Cannon Showcase.png",
+    mobileSrc: "/mobile/anti-smog-mobile.webp",
     title: "Anti Smog Gun",
     subtitle: "Advanced Air Pollution Control",
     description:
@@ -25,16 +29,17 @@ export const images = [
   },
   {
     id: 3,
-    src: "/home/hero2.webp",
+    src: "/banner new (1).webp",
+    mobileSrc: "/mobile/monkey-lifting-mobile.webp",
     title: "Monkey Lifting Machines",
     subtitle: "Automatic & Manual",
     description:
       "High precision lifting machines available in automatic and manual versions for all industries.",
   },
-
   {
     id: 4,
     src: "/home/hero4.webp",
+    mobileSrc: "/mobile/construction-tools-mobile.webp",
     title: "Construction Tools",
     subtitle: "Best in Market",
     description:
@@ -47,42 +52,65 @@ const AccordionHero = () => {
 
   return (
     <>
-      {/* ✅ Mobile view (hidden on md and up) */}
-      <div className="block md:hidden h-[60vh] w-full">
+      {/* =========================================================
+          MOBILE HERO
+      ========================================================= */}
+      <section className="block md:hidden w-full h-[60vh] overflow-hidden">
         <Swiper
-          spaceBetween={10}
           slidesPerView={1}
+          spaceBetween={0}
           loop={true}
+          speed={700}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
+          className="w-full h-full"
         >
           {images.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="relative h-[60vh] w-full">
-                <img
-                  src={item.src}
-                  alt={item.title}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
+            <SwiperSlide key={item.id} className="w-full h-full">
+              <div className="relative w-full h-full overflow-hidden">
+
+                {/* Background Image */}
+               <img
+  src={item.mobileSrc}
+  alt={item.title}
+  className="absolute inset-0 w-full h-full object-cover"
+/>
+
+                {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="relative pt-20 z-10 flex flex-col justify-center items-start h-full px-6 text-white">
+
+                {/* Content */}
+                <div className="relative z-10 flex h-full w-full flex-col justify-center items-start px-6 text-white">
+
+                  {/* Title */}
                   {item.id === 1 ? (
-                    <h1 className="text-3xl font-bold mb-2">{item.title}</h1>
+                    <h1 className="text-3xl font-bold leading-tight mb-2">
+                      {item.title}
+                    </h1>
                   ) : (
-                    <h2 className="text-3xl font-bold mb-2">{item.title}</h2>
+                    <h2 className="text-3xl font-bold leading-tight mb-2">
+                      {item.title}
+                    </h2>
                   )}
 
-                  <p className="text-2xl text-[#FAAC18] font-semibold">
+                  {/* Subtitle */}
+                  <p className="text-2xl text-[#FAAC18] font-semibold leading-tight">
                     {item.subtitle}
                   </p>
-                  <p className="mt-4 max-w-md text-base">{item.description}</p>
-                  <div className="mt-6 flex gap-4">
+
+                  {/* Description */}
+                  <p className="mt-4 max-w-md text-base leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  {/* Button */}
+                  <div className="mt-6">
                     <Link
                       href="/contact-us"
-                      className="bg-white px-4 py-3 rounded-lg text-black font-semibold hover:text-[#FAAC18] transition text-base cursor-pointer inline-block"
+                      className="inline-block bg-white px-5 py-3 rounded-lg text-black font-semibold text-base transition hover:text-[#FAAC18]"
                     >
                       Request a Quote →
                     </Link>
@@ -92,10 +120,12 @@ const AccordionHero = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </section>
 
-      {/* ✅ Desktop view (hidden below md) */}
-      <div className="hidden md:flex h-[100vh] w-full overflow-hidden">
+      {/* =========================================================
+          DESKTOP HERO
+      ========================================================= */}
+      <section className="hidden md:flex h-[100vh] w-full overflow-hidden">
         {images.map((item) => (
           <div
             key={item.id}
@@ -104,19 +134,26 @@ const AccordionHero = () => {
               active === item.id ? "flex-[4]" : "flex-[0.8]"
             }`}
           >
+            {/* Background Image */}
             <img
               src={item.src}
               alt={item.title}
               className="absolute inset-0 h-full w-full object-cover"
             />
+
+            {/* Overlay */}
             <div
               className={`absolute inset-0 transition-colors duration-500 ${
                 active === item.id ? "bg-black/10" : "bg-black/30"
               }`}
             />
+
+            {/* Number */}
             <div className="absolute top-6 left-6 z-20 text-white/70 text-5xl font-bold">
               {String(item.id).padStart(2, "0")}
             </div>
+
+            {/* Content */}
             <div
               className={`absolute inset-0 z-10 flex flex-col justify-center items-start px-10 text-white transition-all duration-700 ${
                 active === item.id
@@ -124,11 +161,10 @@ const AccordionHero = () => {
                   : "opacity-0 translate-x-5 pointer-events-none"
               }`}
             >
-              <p className="absolute text-lg text-[#FAAC18] -left-20 -rotate-90">
-                GST No. 07BPIPM2937L1ZG
-              </p>
               <div className="ml-10 pt-20">
-                <h1 className="text-4xl md:text-7xl font-bold mb-3">
+
+                {/* Heading */}
+                <h1 className="text-4xl md:text-7xl font-bold mb-3 leading-tight">
                   {active === item.id && item.id === 1 ? (
                     <Typewriter
                       words={[
@@ -148,23 +184,32 @@ const AccordionHero = () => {
                     item.title
                   )}
                 </h1>
+
+                {/* Subtitle */}
                 <p className="text-3xl text-[#FAAC18] font-semibold">
                   {item.subtitle}
                 </p>
-                <p className="mt-6 max-w-lg text-lg">{item.description}</p>
-                <div className="mt-8 flex gap-4">
+
+                {/* Description */}
+                <p className="mt-6 max-w-lg text-lg leading-relaxed">
+                  {item.description}
+                </p>
+
+                {/* Button */}
+                <div className="mt-8">
                   <Link
                     href="/contact-us"
-                    className="bg-white px-4 py-3 rounded-lg text-black font-semibold hover:text-[#FAAC18] transition text-lg cursor-pointer inline-block"
+                    className="inline-block bg-white px-5 py-3 rounded-lg text-black font-semibold text-lg transition hover:text-[#FAAC18]"
                   >
                     Request a Quote →
                   </Link>
                 </div>
+
               </div>
             </div>
           </div>
         ))}
-      </div>
+      </section>
     </>
   );
 };
