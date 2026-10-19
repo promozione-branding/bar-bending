@@ -39,7 +39,7 @@ export const images = [
   {
     id: 4,
     src: "/home/hero4.webp",
-    mobileSrc: "/mobile/construction-tools-mobile.webp",
+    mobileSrc: "/home/hero4.webp",
     title: "Construction Tools",
     subtitle: "Best in Market",
     description:
