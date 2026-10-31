@@ -132,7 +132,8 @@ export default function ProductsPage() {
             </p>
           </div>
 
-          <span className="inline-flex items-center gap-2 text-sm font-bold text-gray-900 transition-colors group-hover:text-yellow-600">
+          <span className="inline-flex items-center gap-2 text-sm font-bold 
+         bg-[#FAAC18] text-black rounded-4xl px-4 py-2 transition-colors ">
             View Details
             <span className="transition-transform duration-300 group-hover:translate-x-1">
               →
