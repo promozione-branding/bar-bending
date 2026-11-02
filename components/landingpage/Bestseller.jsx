@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
-// Lazy load Image from next/image
-const Image = lazy(() => import("next/image"));
 
 const products = [
 {
@@ -123,20 +122,14 @@ const ProductCarousel = () => {
             {product.badge}
           </span>
 
-          <Suspense
-            fallback={
-              <div className="w-[400px] h-[400px] bg-gray-200 animate-pulse" />
-            }
-          >
-            <Image
-              src={product.image}
-              alt={product.name}
-              width={500}
-              height={500}
-              priority={current === 0} // prioritize first image for better LCP
-              className="object-contain "
-            />
-          </Suspense>
+          <Image
+            src={product.image}
+            alt={product.name}
+            width={500}
+            height={500}
+            loading="lazy"
+            className="object-contain "
+          />
 
           {/* Left Arrow */}
           <button

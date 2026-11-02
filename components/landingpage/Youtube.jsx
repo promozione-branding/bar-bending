@@ -1,8 +1,3 @@
-"use client";
-
-import { FaYoutube } from "react-icons/fa";
-
-
 export default function YoutubeSection() {
   const videos = [
     {
@@ -48,6 +43,7 @@ export default function YoutubeSection() {
                 src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1&mute=1&loop=1&playlist=${video.videoId}&controls=0&rel=0&modestbranding=1&iv_load_policy=3`}
                 title={video.title}
                 className="absolute inset-0 w-full h-full pointer-events-none"
+                loading="lazy"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
               />
