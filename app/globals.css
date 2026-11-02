@@ -107,6 +107,28 @@ select option {
   animation: sparkle-rotate 2.5s linear infinite;
 }
 
+@keyframes testimonials-scroll-vertical {
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.testimonials-scroll-vertical {
+  animation: testimonials-scroll-vertical 20s linear infinite;
+  will-change: transform;
+}
+
+@keyframes testimonials-scroll-horizontal {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.testimonials-scroll-horizontal {
+  animation: testimonials-scroll-horizontal 25s linear infinite;
+  will-change: transform;
+}
+
 @keyframes sparkle-rotate {
   from {
     transform: rotate(0deg);
@@ -125,7 +147,9 @@ select option {
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
-  .topbar-sparkle {
+  .topbar-sparkle,
+  .testimonials-scroll-vertical,
+  .testimonials-scroll-horizontal {
     animation: none;
   }
 }

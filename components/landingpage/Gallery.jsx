@@ -52,7 +52,7 @@ const GallerySection = () => {
               />
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col items-center justify-center">
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center">
                 <span className="text-white text-xl font-bold">{item.name}</span>
                 <span className="text-yellow-400 mt-2 text-sm tracking-wide">
                   View Product

@@ -1,9 +1,3 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-
 const testimonials = [
   {
     name: "Rajesh Sharma",
@@ -57,17 +51,8 @@ const ClientsSpeak = () => {
       </div>
 
       {/* Right Section (Infinite Auto Scroll Testimonials) */}
-    {/* Right Section (Infinite Auto Scroll Testimonials) */}
 <div className="hidden md:block relative h-[400px] overflow-hidden">
-  <motion.div
-    className="flex flex-col gap-6"
-    animate={{ y: ["0%", "-50%"] }}
-    transition={{
-      repeat: Infinity,
-      duration: 20,
-      ease: "linear",
-    }}
-  >
+  <div className="testimonials-scroll-vertical flex flex-col gap-6">
     {[...testimonials, ...testimonials].map((t, i) => (
       <div
         key={i}
@@ -83,21 +68,13 @@ const ClientsSpeak = () => {
         <span className="ml-auto text-2xl">{t.icon}</span>
       </div>
     ))}
-  </motion.div>
+  </div>
 </div>
 
 
 
 <div className="block md:hidden relative h-auto w-full px-4  overflow-hidden">
-  <motion.div
-    className="flex flex-row gap-4"
-    animate={{ x: ["0%", "-100%"] }} 
-    transition={{
-      repeat: Infinity,
-      duration: 25, // smoother, slower scroll
-      ease: "linear",
-    }}
-  >
+  <div className="testimonials-scroll-horizontal flex flex-row gap-4">
     {[...testimonials, ...testimonials].map((t, i) => (
       <div
         key={i}
@@ -113,7 +90,7 @@ const ClientsSpeak = () => {
         <span className="ml-auto text-xl text-yellow-500">{t.icon}</span>
       </div>
     ))}
-  </motion.div>
+  </div>
 </div>
 
     </section>

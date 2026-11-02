@@ -57,11 +57,9 @@ const AccordionHero = () => {
           prev: {
             shadow: true,
             translate: ["-15%", 0, -300],
-            opacity: 0,
           },
           next: {
             translate: ["100%", 0, 0],
-            opacity: 1,
           },
           limitProgress: 2,
           progressMultiplier: 1,
@@ -217,7 +215,6 @@ const AccordionHero = () => {
           margin: 0 5px !important;
           background: #fff;
           opacity: 0.6;
-          transition: all 0.35s ease;
         }
 
         .hero-full-slider .swiper-pagination-bullet-active {

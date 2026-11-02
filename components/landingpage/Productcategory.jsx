@@ -115,9 +115,7 @@ const Productcategory = () => {
                   alt={cat.name}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-contain p-3 md:p-1
-                  transition-all duration-500
-                  group-hover:scale-105 group-hover:opacity-0"
+                  className="object-contain p-3 md:p-1 group-hover:scale-105 group-hover:opacity-0"
                 />
 
                 {/* Alternate Image */}
@@ -126,10 +124,7 @@ const Productcategory = () => {
                   alt={`${cat.name} alternate view`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="absolute inset-0 object-contain p-3 md:p-5
-                  opacity-0 scale-95
-                  transition-all duration-500
-                  group-hover:opacity-100 group-hover:scale-105"
+                  className="absolute inset-0 object-contain p-3 md:p-5 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-105"
                 />
 
                 {/* Category Number */}
