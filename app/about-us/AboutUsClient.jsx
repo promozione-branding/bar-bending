@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Layers,
   Home,
-  Headphones,
+  Headphones, 
   Truck,
 } from "lucide-react";
 // ✅ Moved outside component to avoid re-creation on every render
