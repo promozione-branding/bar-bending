@@ -120,7 +120,7 @@ const AccordionHero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
 
                 {/* Content */}
-                <div className="relative z-10 flex h-full items-center">
+                <div className="hero-slide-content relative z-10 flex h-full items-center">
                   <div className="mx-auto w-full max-w-[1440px] px-6 py-12 text-white sm:px-10 md:px-16 lg:px-24">
                     <div className="mb-5 flex items-center gap-3">
                       <span className="h-[2px] w-12 bg-[#FAAC18]" />
@@ -226,6 +226,10 @@ const AccordionHero = () => {
 
         .hero-full-slider .swiper-slide {
           overflow: hidden;
+        }
+
+        .hero-full-slider .swiper-slide:not(.swiper-slide-active) .hero-slide-content {
+          visibility: hidden;
         }
 
         .hero-full-slider .swiper-slide-active img {
