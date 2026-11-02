@@ -1,6 +1,4 @@
-'use client'
 import Link from 'next/link'
-import React from 'react'
 
 
 const Check = () => {
@@ -14,7 +12,12 @@ const Check = () => {
         ></div>
 
         {/* Overlay Shape (angled yellow) */}
-        <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gray-200 clip-path-custom z-0"></div>
+        <div
+          className="absolute bottom-0 left-0 w-full h-[50%] bg-gray-200 z-0"
+          style={{
+            clipPath: "polygon(0 40%, 120% 0, 100% 100%, 0% 100%)",
+          }}
+        ></div>
 
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-3 items-center">
@@ -27,6 +30,8 @@ const Check = () => {
             <img
               src="/1 (12) (1).webp"
               alt="Machine Left"
+              loading="lazy"
+              decoding="async"
               className="w-[300px] md:w-[400px] drop-shadow-2xl relative z-20"
             />
           </div>
@@ -63,17 +68,13 @@ const Check = () => {
             <img
               src="/home/smog-gun.webp"
               alt="Machine Right"
+              loading="lazy"
+              decoding="async"
               className="w-[300px] md:w-[400px] drop-shadow-2xl relative z-20"
             />
           </div>
         </div>
 
-        {/* Custom Clip Path */}
-        <style jsx>{`
-          .clip-path-custom {
-            clip-path: polygon(0 40%, 120% 0, 100% 100%, 0% 100%);
-          }
-        `}</style>
       </section>
  
   )

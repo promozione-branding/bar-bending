@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -48,6 +47,7 @@ const GallerySection = () => {
                 src={item.src}
                 alt={item.name}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 className="bg-white object-cover transition-transform duration-700 group-hover:scale-110"
               />
 

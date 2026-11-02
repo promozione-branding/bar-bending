@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectCreative } from "swiper/modules";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,7 +17,7 @@ export const images = [
   {
     id: 1,
     src: "/home/bar bending banner (2).webp",
-    mobileSrc: "/home/mobile 1 (1).webp",
+    mobileSrc: "/home/mobile 1 (1).avif",
     title: "Bar Bending Machine Supplier",
     subtitle: "Machine Supplier",
     description:
@@ -26,7 +26,7 @@ export const images = [
   {
     id: 2,
     src: "/home/anti smog gun banner (1).webp",
-    mobileSrc: "/home/mobile 2 (1).webp", // ← fix this file if it 404s
+    mobileSrc: "/home/mobile 2 (2).avif", // ← fix this file if it 404s
     title: "Anti Smog Gun",
     subtitle: "Advanced Air Pollution Control",
     description:
@@ -35,7 +35,7 @@ export const images = [
   {
     id: 3,
     src: "/home/ber bending banner1.webp",
-    mobileSrc: "/home/mobile 3 (1).webp", // ← fix this file if it 404s
+    mobileSrc: "/home/mobile3.avif", // ← fix this file if it 404s
     title: "Monkey Lifting Machines",
     subtitle: "Automatic & Manual",
     description:
@@ -81,97 +81,106 @@ const AccordionHero = () => {
         }}
         className="hero-full-slider h-full w-full"
       >
-        {images.map((item, index) => (
-          <SwiperSlide key={item.id} className="h-full w-full">
-            <div className="relative h-full w-full overflow-hidden">
-              
-              {/* ===== Desktop Image ===== */}
-              <Image
-                src={item.src}
-                alt={item.title}
-                fill
-                priority={index === 0}
-                fetchPriority={index === 0 ? "high" : "auto"}
-                sizes="(max-width: 767px) 0px, 100vw"
-                className="absolute inset-0 hidden object-cover md:block"
-                quality={80}
-              />
+        {images.map((item, index) => {
+          const desktopImage = getImageProps({
+            src: item.src,
+            alt: item.title,
+            width: 1920,
+            height: 1080,
+            sizes: "100vw",
+            quality: 80,
+            loading: index === 0 ? "eager" : "lazy",
+            fetchPriority: index === 0 ? "high" : "auto",
+          });
+          const mobileImage = getImageProps({
+            src: item.mobileSrc || item.src,
+            alt: item.title,
+            width: 750,
+            height: 1000,
+            sizes: "100vw",
+            quality: 75,
+            loading: index === 0 ? "eager" : "lazy",
+            fetchPriority: index === 0 ? "high" : "auto",
+          });
 
-              {/* ===== Mobile Image ===== */}
-              <Image
-                src={item.mobileSrc || item.src}
-                alt={item.title}
-                fill
-                priority={index === 0}
-                fetchPriority={index === 0 ? "high" : "auto"}
-                sizes="(max-width: 767px) 100vw, 0px"
-                className="absolute inset-0 object-cover object-center md:hidden"
-                quality={75}
-              />
+          return (
+            <SwiperSlide key={item.id} className="h-full w-full">
+              <div className="relative h-full w-full overflow-hidden">
+                <picture className="absolute inset-0 block">
+                  <source
+                    media="(max-width: 767px)"
+                    srcSet={mobileImage.props.srcSet}
+                    sizes="100vw"
+                  />
+                  <img
+                    {...desktopImage.props}
+                    className="h-full w-full object-cover object-center"
+                  />
+                </picture>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
 
-              {/* Content */}
-              <div className="relative z-10 flex h-full items-center">
-                <div className="mx-auto w-full max-w-[1440px] px-6 py-12 text-white sm:px-10 md:px-16 lg:px-24">
-                  
-                  <div className="mb-5 flex items-center gap-3">
-                    <span className="h-[2px] w-12 bg-[#FAAC18]" />
-                    <span className="text-sm font-bold tracking-[0.25em] text-white/80">
-                      0{item.id} / 0{images.length}
-                    </span>
-                  </div>
+                {/* Content */}
+                <div className="relative z-10 flex h-full items-center">
+                  <div className="mx-auto w-full max-w-[1440px] px-6 py-12 text-white sm:px-10 md:px-16 lg:px-24">
+                    <div className="mb-5 flex items-center gap-3">
+                      <span className="h-[2px] w-12 bg-[#FAAC18]" />
+                      <span className="text-sm font-bold tracking-[0.25em] text-white/80">
+                        0{item.id} / 0{images.length}
+                      </span>
+                    </div>
 
-                  {/* Heading */}
-                  <h1 className="max-w-5xl text-3xl font-extrabold leading-tight sm:text-4xl md:text-6xl lg:text-7xl">
-                    {item.id === 1 ? (
-                      <Typewriter
-                        words={[
-                          "Bar Bending Machine Supplier",
-                          "Bar Cutting Machine Supplier",
-                          "Rebar Processing Solutions",
-                        ]}
-                        loop={0}
-                        cursor
-                        cursorStyle="|"
-                        typeSpeed={60}
-                        deleteSpeed={35}
-                        delaySpeed={1500}
-                      />
-                    ) : (
-                      item.title
-                    )}
-                  </h1>
+                    {/* Heading */}
+                    <h1 className="max-w-5xl text-3xl font-extrabold leading-tight sm:text-4xl md:text-6xl lg:text-7xl">
+                      {item.id === 1 ? (
+                        <Typewriter
+                          words={[
+                            "Bar Bending Machine Supplier",
+                            "Bar Cutting Machine Supplier",
+                            "Rebar Processing Solutions",
+                          ]}
+                          loop={0}
+                          cursor
+                          cursorStyle="|"
+                          typeSpeed={60}
+                          deleteSpeed={35}
+                          delaySpeed={1500}
+                        />
+                      ) : (
+                        item.title
+                      )}
+                    </h1>
 
-                  {/* Subtitle */}
-                  <p className="mt-4 text-xl font-semibold text-[#FAAC18] sm:text-2xl md:text-3xl">
-                    {item.subtitle}
-                  </p>
+                    {/* Subtitle */}
+                    <p className="mt-4 text-xl font-semibold text-[#FAAC18] sm:text-2xl md:text-3xl">
+                      {item.subtitle}
+                    </p>
 
-                  {/* Description */}
-                  <p className="mt-5 max-w-2xl text-sm leading-7 text-white/90 sm:text-base md:text-lg">
-                    {item.description}
-                  </p>
+                    {/* Description */}
+                    <p className="mt-5 max-w-2xl text-sm leading-7 text-white/90 sm:text-base md:text-lg">
+                      {item.description}
+                    </p>
 
-                  {/* Button */}
-                  <div className="mt-8">
-                    <Link
-                      href="/contact-us"
-                      className="group inline-flex items-center gap-3 rounded-md bg-[#FAAC18] px-6 py-3.5 text-sm font-bold text-black transition-all duration-300 hover:bg-white sm:text-base"
-                    >
-                      Request a Quote
-                      <ArrowRight
-                        size={19}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      />
-                    </Link>
+                    {/* Button */}
+                    <div className="mt-8">
+                      <Link
+                        href="/contact-us"
+                        className="group inline-flex items-center gap-3 rounded-md bg-[#FAAC18] px-6 py-3.5 text-sm font-bold text-black transition-all duration-300 hover:bg-white sm:text-base"
+                      >
+                        Request a Quote
+                        <ArrowRight
+                          size={19}
+                          className="transition-transform duration-300 group-hover:translate-x-1"
+                        />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       {/* Navigation Arrows */}

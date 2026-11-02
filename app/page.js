@@ -32,7 +32,7 @@ export default function Home() {
       <Productcategory></Productcategory>
         <Whychoose></Whychoose>
       <Bestseller></Bestseller>
-       {/* <Youtube></Youtube> */}
+       <Youtube></Youtube>
       <Process></Process>
       <Check></Check>
 
