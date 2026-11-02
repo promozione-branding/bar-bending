@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import axios from "axios";
+import { handleWhatsappClick } from "@/utils/tracking";
 
 const Cta = () => {
   const [status, setStatus] = useState("");
@@ -67,9 +68,10 @@ ${message}`;
           whatsappText
         )}`;
 
-        setTimeout(() => {
-          window.open(waUrl, "_blank");
-        }, 1000);
+setTimeout(() => {
+  handleWhatsappClick({ source: "website" });
+  window.open(waUrl, "_blank");
+}, 1000);
 
         setName("");
         setPhone("");

@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Star,
 } from "lucide-react";
+import { handleWhatsappClick } from "@/utils/tracking";
 
 const Navbar = () => {
   const navItems = ["Home", "About Us", "Products", "Blogs", "Contact Us"];
@@ -26,17 +27,14 @@ const Navbar = () => {
     return "/" + item.toLowerCase().replace(/\s+/g, "-");
   };
 
-  const openWhatsApp = () => {
-    const phoneNumber = "918826544443";
-    const message = encodeURIComponent(
-      "Hello! I want to request a quote."
-    );
+const openWhatsApp = (source = "Website") => {
+  handleWhatsappClick({ source });
 
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${message}`,
-      "_blank"
-    );
-  };
+  const phoneNumber = "918826544443";
+  const message = encodeURIComponent("Hello! I want to request a quote.");
+
+  window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+};
 
   return (
     <>
@@ -183,7 +181,7 @@ const Navbar = () => {
           {/* Desktop Button */}
           <div className="hidden md:flex">
             <button
-              onClick={openWhatsApp}
+              onClick={() => openWhatsApp("Website")}
               className="w-full flex justify-center items-center gap-2 bg-[#FAAC18] font-bold text-lg cursor-pointer hover:bg-[#e99b10] text-white py-3 px-5 rounded transition duration-300"
             >
               Request a Quote
@@ -266,7 +264,7 @@ const Navbar = () => {
 
             <li>
               <button
-                onClick={openWhatsApp}
+                onClick={() => openWhatsApp("Website")}
                 className="w-full flex justify-center items-center gap-2 bg-[#FAAC18] font-bold text-lg cursor-pointer hover:bg-[#e99b10] text-white py-3 px-5 rounded transition duration-300"
               >
                 Request a Quote

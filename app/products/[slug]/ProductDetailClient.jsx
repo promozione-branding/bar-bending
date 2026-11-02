@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { handleWhatsappClick } from "@/utils/tracking";
 
 export default function ProductDetailClient({ product, relatedProducts = [] }) {
 
@@ -228,16 +229,17 @@ export default function ProductDetailClient({ product, relatedProducts = [] }) {
               >
                 Enquire Now
               </button>
-              <a
-                href={`https://wa.me/+918826544443?text=Hello, I am interested in ${encodeURIComponent(
-                  product.name
-                )} (Model: ${product.model}). Please provide more details.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 text-center px-4 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg shadow hover:from-green-600 hover:to-green-700 transition font-semibold"
-              >
-                WhatsApp Now
-              </a>
+<a
+  href={`https://wa.me/+918826544443?text=Hello, I am interested in ${encodeURIComponent(
+    product.name
+  )} (Model: ${product.model}). Please provide more details.`}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => handleWhatsappClick({ obj: product, source: "Website" })}
+  className="flex-1 text-center px-4 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg shadow hover:from-green-600 hover:to-green-700 transition font-semibold"
+>
+  WhatsApp Now
+</a>
             </div>
           </div>
         </div>
