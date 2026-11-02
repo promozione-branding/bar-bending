@@ -28,7 +28,7 @@ export default function YoutubeSection() {
   ];
 
   return (
-    <section className=" hidden md:block max-w-7xl mx-auto py-12 px-5">
+   <section className="hidden md:block max-w-7xl mx-auto py-12 px-5">
 
       {/* Heading */}
       <h2 className="text-3xl font-bold text-center mb-12">

@@ -1,15 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectCreative } from "swiper/modules";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
-
-import {
-  ArrowLeft,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,7 +26,7 @@ export const images = [
   {
     id: 2,
     src: "/home/anti smog gun banner (1).webp",
-    mobileSrc: "/home/mobile 2 (1).webp",
+    mobileSrc: "/home/mobile 2 (1).webp", // ← fix this file if it 404s
     title: "Anti Smog Gun",
     subtitle: "Advanced Air Pollution Control",
     description:
@@ -38,27 +35,17 @@ export const images = [
   {
     id: 3,
     src: "/home/ber bending banner1.webp",
-    mobileSrc: "/home/mobile 3 (1).webp",
+    mobileSrc: "/home/mobile 3 (1).webp", // ← fix this file if it 404s
     title: "Monkey Lifting Machines",
     subtitle: "Automatic & Manual",
     description:
       "High-precision lifting machines for construction and industrial applications.",
   },
-  // {
-  //   id: 4,
-  //   src: "/home/hero4.webp",
-  //   mobileSrc: "/home/hero4.webp",
-  //   title: "Construction Tools",
-  //   subtitle: "Best in Market",
-  //   description:
-  //     "Quality construction tools designed for professional use in modern construction projects.",
-  // },
 ];
 
 const AccordionHero = () => {
   return (
     <section className="relative h-[70vh] min-h-[480px] w-full overflow-hidden md:h-screen md:min-h-[600px]">
-
       <Swiper
         modules={[Autoplay, Pagination, Navigation, EffectCreative]}
         slidesPerView={1}
@@ -94,23 +81,32 @@ const AccordionHero = () => {
         }}
         className="hero-full-slider h-full w-full"
       >
-        {images.map((item) => (
+        {images.map((item, index) => (
           <SwiperSlide key={item.id} className="h-full w-full">
-
             <div className="relative h-full w-full overflow-hidden">
-
-              {/* Desktop Image */}
-              <img
+              
+              {/* ===== Desktop Image ===== */}
+              <Image
                 src={item.src}
                 alt={item.title}
-                className="absolute inset-0 hidden h-full w-full object-cover md:block"
+                fill
+                priority={index === 0}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                sizes="(max-width: 767px) 0px, 100vw"
+                className="absolute inset-0 hidden object-cover md:block"
+                quality={80}
               />
 
-              {/* Mobile Image */}
-              <img
+              {/* ===== Mobile Image ===== */}
+              <Image
                 src={item.mobileSrc || item.src}
                 alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover object-center md:hidden"
+                fill
+                priority={index === 0}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                sizes="(max-width: 767px) 100vw, 0px"
+                className="absolute inset-0 object-cover object-center md:hidden"
+                quality={75}
               />
 
               {/* Overlay */}
@@ -119,7 +115,7 @@ const AccordionHero = () => {
               {/* Content */}
               <div className="relative z-10 flex h-full items-center">
                 <div className="mx-auto w-full max-w-[1440px] px-6 py-12 text-white sm:px-10 md:px-16 lg:px-24">
-
+                  
                   <div className="mb-5 flex items-center gap-3">
                     <span className="h-[2px] w-12 bg-[#FAAC18]" />
                     <span className="text-sm font-bold tracking-[0.25em] text-white/80">
@@ -171,18 +167,15 @@ const AccordionHero = () => {
                       />
                     </Link>
                   </div>
-
                 </div>
               </div>
             </div>
-
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Navigation Arrows */}
       <div className="absolute bottom-16 right-6 z-30 flex items-center gap-3 sm:right-10 md:bottom-12 md:right-16 lg:right-24">
-
         <button
           type="button"
           aria-label="Previous slide"
@@ -198,7 +191,6 @@ const AccordionHero = () => {
         >
           <ArrowRight size={22} />
         </button>
-
       </div>
 
       {/* Pagination + Animation Styling */}
@@ -263,7 +255,6 @@ const AccordionHero = () => {
           }
         }
       `}</style>
-
     </section>
   );
 };

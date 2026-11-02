@@ -1,5 +1,5 @@
 import Bestseller from "@/components/landingpage/Bestseller";
-import AccordionHero from "@/components/landingpage/Hero";
+// import AccordionHero from "@/components/landingpage/Hero";
 import Navbar from "@/components/Navbar";
 import About from "@/components/landingpage/About";
 import Cta from "@/components/landingpage/Cta";
@@ -26,7 +26,7 @@ export default function Home() {
    
       <Navbar />
       <Popup></Popup>
-      <AccordionHero></AccordionHero>
+      {/* <AccordionHero></AccordionHero> */}
 
       <About></About>
       <Productcategory></Productcategory>
